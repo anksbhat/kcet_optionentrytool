@@ -82,12 +82,31 @@ if pdf_file:
         # Step 8: Sort
         options_sorted = options.sort_values(by=["rank_numeric", "college_priority", "branch_priority"], ascending=True)
         options_sorted.drop(columns=["rank_numeric", "college_priority", "branch_priority"], inplace=True)
-        st.subheader("Your Ranked KCET Options (Numbered List)")
+        st.subheader("Your Ranked KCET Options List")
+        # Build a styled HTML list
+        html = "<div style='font-family:Arial;'>"
         for i, row in enumerate(options_sorted.itertuples(index=False), 1):
-            st.markdown(f"**{i}.** {row.College_Name_Clean} - {row.Course_Name}<br>Rank: {row.rank}", unsafe_allow_html=True)
+            html += f"<div style='background:#f8f9fa;border-radius:8px;padding:10px;margin-bottom:8px;box-shadow:0 1px 3px #ccc;'>"
+            html += f"<span style='font-size:18px;font-weight:bold;color:#0072C6;'>{i}. {row.College_Name_Clean}</span>"
+            html += f"<br><span style='font-size:16px;color:#333;'>{row.Course_Name}</span>"
+            html += f"<br><span style='font-size:15px;color:#666;'>Rank: <b>{row.rank}</b></span>"
+            html += "</div>"
+        html += "</div>"
+        st.markdown(html, unsafe_allow_html=True)
         # Step 9: Download CSV
         csv_bytes = BytesIO()
         options_sorted.to_csv(csv_bytes, index=False)
         st.download_button("Download Ranked CSV", data=csv_bytes.getvalue(), file_name="KCET_Option_Entry_Ranked.csv", mime="text/csv")
+        # Step 10: Download PDF
+        from fpdf import FPDF
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Arial", size=12)
+        pdf.cell(200, 10, txt="KCET Option Entry Ranked List", ln=True, align='C')
+        for i, row in enumerate(options_sorted.itertuples(index=False), 1):
+            line = f"{i}. {row.College_Name_Clean} - {row.Course_Name} | Rank: {row.rank}"
+            pdf.cell(0, 10, txt=line, ln=True)
+        pdf_bytes = BytesIO(pdf.output(dest='S').encode('latin-1'))
+        st.download_button("Download Ranked List as PDF", data=pdf_bytes.getvalue(), file_name="KCET_Option_Entry_Ranked.pdf", mime="application/pdf")
 else:
     st.info("Please upload your option entry PDF to begin.")
