@@ -82,8 +82,9 @@ if pdf_file:
         # Step 8: Sort
         options_sorted = options.sort_values(by=["rank_numeric", "college_priority", "branch_priority"], ascending=True)
         options_sorted.drop(columns=["rank_numeric", "college_priority", "branch_priority"], inplace=True)
-        st.subheader("Your Ranked KCET Options")
-        st.dataframe(options_sorted)
+        st.subheader("Your Ranked KCET Options (Numbered List)")
+        for i, row in enumerate(options_sorted.itertuples(index=False), 1):
+            st.markdown(f"**{i}.** {row.College_Name_Clean} - {row.Course_Name}<br>Rank: {row.rank}", unsafe_allow_html=True)
         # Step 9: Download CSV
         csv_bytes = BytesIO()
         options_sorted.to_csv(csv_bytes, index=False)
