@@ -92,7 +92,7 @@ if pdf_file:
         # Remove empty rows (if any) for accurate count
         options_display = options.dropna(how='all')
         st.success(f"Parsed {len(options_display)} option entries from PDF.")
-        st.markdown("<h4>Parsed Option Entries (from your PDF):</h4>")
+        st.markdown("#### Parsed Option Entries (from your PDF)")
         st.dataframe(options_display, use_container_width=True, height=350)
         # Step 2: Select KCET category
         category = st.selectbox("Select your KCET category", CATEGORY_COLS, index=15)
