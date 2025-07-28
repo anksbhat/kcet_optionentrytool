@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Show cutoff CSV head",
+			"command": "python",
+			"args": [
+				"-c",
+				"import pandas as pd; df = pd.read_csv('data/cutoff_data_structured.csv'); print(df.head(20).to_string())"
+			],
+			"problemMatcher": [],
+			"group": "none",
+			"isBackground": false
+		}
+	]
+}

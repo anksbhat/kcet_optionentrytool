@@ -2,3 +2,7 @@ streamlit
 pdfplumber
 pandas
 fpdf
+transformers
+torch
+pdf2image
+pillow
