@@ -6,3 +6,4 @@ transformers
 torch
 pdf2image
 pillow
+rapidfuzz
