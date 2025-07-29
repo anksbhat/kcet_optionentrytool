@@ -17,29 +17,42 @@ Try it live: [KCET Option Entry Tool](https://kcetoptionentrytoolgit-m7iauvpyxlx
 ## How to Use
 
 1. **Home Page**
-   - ![Home Page](screenshots/home.png)
-   - Go to the website and see the upload option.
+   
+   ![Home Page](screenshots/home.png)
+   
+   Go to the website and see the upload option.
 
 2. **Upload your Option Entry PDF**
-   - ![PDF Upload](screenshots/pdf_upload.png)
-   - Click the “Upload your Option Entry PDF” button and select your file.
+   
+   ![PDF Upload](screenshots/pdf_upload.png)
+   
+   Click the “Upload your Option Entry PDF” button and select your file.
 
 3. **Select your KCET category**
-   - ![Select Category](screenshots/select_category.png)
-   - Choose your category (e.g., GM, 2AG, SCG, etc.) from the dropdown.
+   
+   ![Select Category](screenshots/select_category.png)
+   
+   Choose your category (e.g., GM, 2AG, SCG, etc.) from the dropdown.
 
 4. **View all extracted ranks for the selected category**
-   - ![Extracted Ranks](screenshots/extracted_ranks.png)
-   - Instantly see your college and branch options, with last year’s cutoff ranks for your selected category.
+   
+   ![Extracted Ranks](screenshots/extracted_ranks.png)
+   
+   Instantly see your college and branch options, with last year’s cutoff ranks for your selected category.
 
 5. **Select priority of branch and college (mutually inclusive)**
-   - ![Select Priority](screenshots/select_priority.png)
-   - Select and order your preferred colleges and branches/courses. These priorities are mutually inclusive: for each branch in branch priority, all colleges in college priority for that branch are shown first, and vice versa.
-   - **Do not forget to hit the Refresh List button after selecting your priorities!**
+   
+   ![Select Priority](screenshots/select_priority.png)
+   
+   Select and order your preferred colleges and branches/courses. These priorities are mutually inclusive: for each branch in branch priority, all colleges in college priority for that branch are shown first, and vice versa.
+   
+   **Do not forget to hit the Refresh List button after selecting your priorities!**
 
 6. **Download ranked list as PDF or Excel**
-   - ![Download Ranked List](screenshots/download_ranked_list.png)
-   - Download your ranked list as a PDF or CSV (Excel) for easy reference.
+   
+   ![Download Ranked List](screenshots/download_ranked_list.png)
+   
+   Download your ranked list as a PDF or CSV (Excel) for easy reference.
 
 ---
 
@@ -75,11 +88,13 @@ streamlit run web/kcet_streamlit_app.py
 
 ## Screenshots
 
-  - home.png
-  - pdf_upload.png
-  - select_category.png
-  - extracted_ranks.png
-  - select_priority.png
-  - download_ranked_list.png
+All screenshots used above are available in the `screenshots/` folder:
+
+![Home Page](screenshots/home.png)
+![PDF Upload](screenshots/pdf_upload.png)
+![Select Category](screenshots/select_category.png)
+![Extracted Ranks](screenshots/extracted_ranks.png)
+![Select Priority](screenshots/select_priority.png)
+![Download Ranked List](screenshots/download_ranked_list.png)
 
 ---
