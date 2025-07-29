@@ -6,7 +6,7 @@ So, here’s how this tool was born: My cousin was totally stressed about KCET o
 
 Fast-forward a few late-night coding sessions (and a lot of coffee), and boom—KCET Option Entry Helper was live! Now, instead of spending hours on manual matching, you just upload your PDF and get a ranked list in seconds. If you’ve ever thought, “There’s gotta be an easier way,” this is it. Built for my cousin, shared for everyone. #GenZDev #BuiltForFam #WhyNot
 
-A simple web app to help you quickly rank your KCET option entries with last year’s cutoff data.
+A simple web app to help you quickly rank your KCET option entries with current mock cutoff 2025.
 
 Try it live: [KCET Option Entry Tool](https://kcetoptionentrytoolgit-m7iauvpyxlxttujjh47lp6.streamlit.app/)
 
